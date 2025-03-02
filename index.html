@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Can Bldg Tech</title>
+    <!-- adobe fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/pvy3ocx.css" />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- flickity -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+    <style>
+      :root {
+        --background-color: #2c3930;
+        --logo-color: #dcd7c9;
+        --section-title-color: #dcd7c9;
+        --text-color: #dcd7c9;
+        --footer-border-color: #ddd;
+        --footer-text-color: #888;
+        --logo-font: "brush-script-std", sans-serif;
+        --body-font: "Lexend", sans-serif;
+      }
+
+      body {
+        font-family: var(--body-font);
+        font-weight: 300;
+        font-style: normal;
+        background-color: var(--background-color);
+        color: var(--text-color);
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        text-align: center;
+      }
+
+      a {
+        color: var(--text-color);
+        font-weight: bold;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 20px;
+      }
+
+      .logo {
+        font-family: var(--logo-font);
+        font-weight: 400;
+        font-style: normal;
+        font-size: 4em;
+        color: var(--logo-color);
+        margin-bottom: 40px;
+      }
+
+      .section-title {
+        font-size: 1.8em;
+        color: var(--section-title-color);
+        margin-top: 40px;
+        margin-bottom: 15px;
+      }
+
+      .section-content {
+        text-align: left;
+        margin-bottom: 30px;
+      }
+
+      .footer {
+        margin-top: 50px;
+        padding: 20px 0;
+        border-top: 1px solid var(--footer-border-color);
+        font-size: 0.8em;
+        color: var(--footer-text-color);
+      }
+
+      .contact-section {
+        margin-top: 50px;
+        text-align: center;
+      }
+
+      .contact-section p {
+        margin-bottom: 10px;
+      }
+
+      /* porject Carousel styling */
+      /* .carousel {
+        background: #eee;
+      } */
+
+      .carousel-cell {
+        margin-right: 20px;
+        overflow: hidden;
+      }
+
+      .carousel-cell img {
+        display: block;
+        height: 200px;
+      }
+
+      @media screen and (min-width: 768px) {
+        .carousel-cell img {
+          height: 400px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="logo">Can Bldg Tech</h1>
+
+      <div class="section-content">
+        <p>The Specialist Approach</p>
+        <p>
+          Canera Building Technologies, in short Can Bldg Tech is committed to
+          providing lasting solutions to civil engineering problems, delivering
+          strength and durability alongside aesthetic beauty. We utilize
+          state-of-the-art technology to ensure structures endure, even against
+          nature's challenges.
+        </p>
+      </div>
+
+      <div class="section-title"><h3>Our Services</h3></div>
+
+      <div class="section-title">Waterproofing</div>
+      <div class="section-content">
+        <p>
+          Ensuring waterproofing at every stage of construction to prevent
+          serious damage. Innovative solutions for terrace gardens, basements,
+          and swimming pools.
+        </p>
+      </div>
+
+      <div class="section-title">Industrial Applications</div>
+      <div class="section-content">
+        <p>
+          Protecting floors from mechanical wear and chemical spillages.
+          Solutions for restoring damaged floors, bridges, and hydraulic
+          structures. Chemical resistant treatments for effluent plants and
+          industrial tanks.
+        </p>
+      </div>
+
+      <div class="section-title">Structural Restoration</div>
+      <div class="section-content">
+        <p>
+          Specialized techniques for restoring and repairing distressed RCC
+          structures. Crack grouting, member strengthening, and careful
+          restoration of monuments.
+        </p>
+      </div>
+
+      <div class="section-title"><h3>Our Approach</h3></div>
+      <div class="section-content">
+        <p>
+          Founded on a commitment to deliver effective solutions within time and
+          budget, using the latest technology.
+        </p>
+      </div>
+
+      <div class="section-title">Our People</div>
+      <div class="section-content">
+        <p>
+          A professionally run organization guided by vast experience, with a
+          specialized team of engineers who analyze each problem thoroughly to
+          prescribe the right cure.
+        </p>
+      </div>
+
+      <div class="section-title">Our Technology</div>
+      <div class="section-content">
+        <p>
+          Extensive knowledge of building chemicals allows us to create
+          tailor-made solutions for the building industry, ensuring structural
+          longevity.
+        </p>
+      </div>
+
+      <div>
+        <div class="section-title"><h3>Past Work</h3></div>
+
+        <div class="carousel" id="carousel-items"></div>
+      </div>
+
+      <script>
+        const galleryData = [
+          {
+            id: 1,
+            name: "roof",
+            filename: "1.jpeg",
+            alt: "work 1",
+            projectLink: "project1.html",
+          },
+          {
+            id: 2,
+            name: "roof",
+            filename: "2.jpeg",
+            alt: "work 2",
+            projectLink: "project2.html",
+          },
+          {
+            id: 3,
+            name: "terrace",
+            filename: "3.jpeg",
+            alt: "work 3",
+            projectLink: "project3.html",
+          },
+          {
+            id: 4,
+            name: "terrace",
+            filename: "4.jpeg",
+            alt: "work 4",
+            projectLink: "project4.html",
+          },
+          {
+            id: 5,
+            name: "roof",
+            filename: "5.jpeg",
+            alt: "work 5",
+            projectLink: "project5.html",
+          },
+          {
+            id: 6,
+            name: "roof",
+            filename: "6.jpeg",
+            alt: "work 6",
+            projectLink: "project6.html",
+          },
+          {
+            id: 8,
+            name: "washroom",
+            filename: "8.jpeg",
+            alt: "work 8",
+            projectLink: "project8.html",
+          },
+          {
+            id: 9,
+            name: "washroom",
+            filename: "9.jpeg",
+            alt: "work 9",
+            projectLink: "project9.html",
+          },
+          {
+            id: 10,
+            name: "garden",
+            filename: "10.jpeg",
+            alt: "work 10",
+            projectLink: "project10.html",
+          },
+          {
+            id: 7,
+            name: "windows",
+            filename: "7.jpeg",
+            alt: "work 7",
+            projectLink: "project7.html",
+          },
+          {
+            id: 11,
+            name: "roof",
+            filename: "11.jpeg",
+            alt: "work 11",
+            projectLink: "project11.html",
+          },
+          {
+            id: 12,
+            name: "pool",
+            filename: "12.jpeg",
+            alt: "work 12",
+            projectLink: "project12.html",
+          },
+        ];
+
+        const galleryItems = document.getElementById("carousel-items");
+
+        galleryData.forEach((item) => {
+          console.log(item);
+          const galleryItem = document.createElement("div");
+          galleryItem.classList.add("carousel-cell");
+
+          const image = document.createElement("img");
+          image.src = `img/${item.filename}`;
+          image.alt = item.alt;
+
+          const projectTitle = document.createElement("div");
+          projectTitle.classList.add("project-title");
+          projectTitle.textContent = item.name;
+
+          galleryItem.appendChild(image);
+          //   galleryItem.appendChild(projectTitle);
+
+          //   galleryItem.addEventListener("click", () => {
+          //     if (item.projectLink) {
+          //       window.location.href = item.projectLink;
+          //     }
+          //   });
+
+          console.log(galleryItem.innerHTML);
+          galleryItems.appendChild(galleryItem);
+        });
+      </script>
+
+      <div class="contact-section">
+        <div class="section-title"><h3>Contact Us</h3></div>
+        <p>
+          Email: <a href="mailto:info@canbldgtech.com">info@canbldgtech.com</a>
+        </p>
+        <p>Phone: <a href="tel:+919980916377">+91 9980916377</a></p>
+        <p>Address: 98, Adithya Layout, RR Nagar, Bengaluru 560098</p>
+      </div>
+
+      <div class="footer">
+        <p>
+          Note: Every reasonable precaution is taken while making
+          recommendations. Results depend on various factors. Detailed
+          discussion prior to implementation is recommended.
+        </p>
+        <p>
+          Powered by
+          <a href="https://codebloomstudios.com">Codebloom Studios</a>
+        </p>
+      </div>
+    </div>
+
+    <script>
+      // external js: flickity.pkgd.js
+
+      var carousel = document.querySelector(".carousel");
+      var flkty = new Flickity(carousel, {
+        imagesLoaded: true,
+        percentPosition: false,
+      });
+
+      var imgs = carousel.querySelectorAll(".carousel-cell img");
+      // get transform property
+      var docStyle = document.documentElement.style;
+      var transformProp =
+        typeof docStyle.transform == "string" ? "transform" : "WebkitTransform";
+
+      flkty.on("scroll", function () {
+        flkty.slides.forEach(function (slide, i) {
+          var img = imgs[i];
+          var x = ((slide.target + flkty.x) * -1) / 3;
+          img.style[transformProp] = "translateX(" + x + "px)";
+        });
+      });
+    </script>
+  </body>
+</html>
